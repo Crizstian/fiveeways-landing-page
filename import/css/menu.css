@@ -1,0 +1,116 @@
+/* -------------------------------- 
+
+xNavigation 
+
+-------------------------------- */
+header {
+  background: rgb(106,37,66);
+}
+
+.cd-main-nav {
+  /* main navigation background color - full screen on small devices */
+  background: black;
+}
+.cd-main-nav li a {
+  color: #fd7ec6;
+}
+@media only screen and (min-width: 1024px) {
+  .cd-main-nav li a {
+    color: #fd7ec6;
+  }
+  .cd-main-nav li a.selected {
+    color: rgb(106,37,66);
+    box-shadow: 0 2px 0 #5f8ee4;
+  }
+  .no-touch .cd-main-nav li a:hover {
+    color: rgb(106,37,66);
+  }
+}
+
+header {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+header nav {
+  display: inline-block;
+  border: 2px solid rgb(106,37,66);
+  position: relative;
+  left: 17%;
+  width: 66%;
+  background: white;
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    height: 80px;
+  }
+  header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+.cd-main-nav {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 50px 0;
+  text-align: center;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+}
+.cd-main-nav li a {
+  display: block;
+  font-size: 2rem;
+  padding: 1em 0;
+  border-bottom-width: 1px;
+  border-style: solid;
+}
+.cd-main-nav li:first-of-type a {
+  border-top-width: 1px;
+}
+@media only screen and (min-width: 1024px) {
+  .cd-main-nav {
+    display: table;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    width: auto;
+    height: 80px;
+    background: transparent;
+    padding: 0 2em;
+    text-align: left;
+  }
+  .cd-main-nav li {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 1em;
+  }
+  .cd-main-nav li a {
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: .0em .2em;
+    border-bottom: none;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .cd-main-nav li:first-of-type a {
+    border-top: none;
+  }
+}
+
